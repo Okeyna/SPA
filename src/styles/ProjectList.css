@@ -1,0 +1,12 @@
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.no-results {
+  text-align: center;
+  color: #95a5a6;
+  padding: 2rem;
+  font-style: italic;
+}

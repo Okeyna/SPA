@@ -1,0 +1,34 @@
+import React, { useState } from 'react';
+import Header from './components/Header';
+import AddProjectForm from './components/AddProjectForm';
+import SearchAndProjects from './components/SearchAndProjects';
+import './styles/App.css';
+
+const App = () => {
+  const [projects, setProjects] = useState([
+    { id: 1, title: 'Project 1', description: 'Description of the project' },
+    { id: 2, title: 'Project 2', description: 'Description of the project' },
+    { id: 3, title: 'Project 3', description: 'Description of the project' },
+  ]);
+
+  const addProject = (title, description) => {
+    const newProject = {
+      id: Date.now(),
+      title: title.trim(),
+      description: description.trim(),
+    };
+    setProjects([newProject, ...projects]);
+  };
+
+  return (
+    <div className="app-container">
+      <Header />
+      <div className="app-main-content">
+        <AddProjectForm onAddProject={addProject} />
+        <SearchAndProjects projects={projects} />
+      </div>
+    </div>
+  );
+};
+
+export default App;
