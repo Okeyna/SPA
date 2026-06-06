@@ -25,7 +25,7 @@ describe('App Component', () => {
   });
 
   test('displays initial projects', () => {
-    expect(screen.getByText('Project 1')).toBeInTheDocument();
+    expect(screen.getByText('Wordly')).toBeInTheDocument();
     expect(screen.getByText('Project 2')).toBeInTheDocument();
     expect(screen.getByText('Project 3')).toBeInTheDocument();
     
